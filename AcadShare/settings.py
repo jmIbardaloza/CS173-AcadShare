@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+import django_heroku
 
 
 # Quick-start development settings - unsuitable for production
@@ -136,3 +137,5 @@ STATICFILES_DIRS = (
 AUTH_USER_MODEL = "registration.student"
 
 LOGOUT_REDIRECT_URL = '/'
+
+django_heroku.settings(locals())
