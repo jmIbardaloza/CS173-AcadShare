@@ -1,0 +1,31 @@
+{% extends "./base.html"%}
+{%load static%}
+
+{% block body %}
+<body>
+{% endblock %}
+
+{%block content%}
+<body style="background-color: #ffffff">
+  <form method = "POST">
+  {% csrf_token %}
+  <div>
+    <div style="text-align: center; color: #E2895F;">
+      <!-- <h4>{{reviewer.reviewerTitle}}</h4> -->
+      <h4>Title: </h4>
+      <div class="wrapper" style="top: 30%; left: 32.5%;">
+        <div class="form-group input-field">
+          <input placeholder="Title" id="title" type="text" name="title" class="validate">
+        </div>
+      </div>
+    </div>
+    <div class="reviewer container" style="color: #E2895F;">
+      <h4>Content: </h4>
+      <!-- <pre>{{reviewer.reviewerContent}}</pre> -->
+      <textarea name="content" id="content" rows="100" cols="1000"></textarea>
+    </div>
+  </div>
+  <button class="waves-effect waves-light btn-large" href="" style="left: 44.65%;" type="Submit">Create Reviewer</button>
+  </form>
+  </body>
+{% endblock content %}

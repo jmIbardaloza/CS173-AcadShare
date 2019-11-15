@@ -1,0 +1,22 @@
+{% extends "./base.html"%}
+{% load static %}
+
+{%block content%}
+<body style="background-color: #ffffff">
+    <div>
+    <div style="text-align: center; color: #E2895F;">
+      <h4 style="display: inline-block">{{reviewer.reviewerTitle}}</h4>
+      {% if quiz %}
+        <a class="waves-effect waves-light btn-large" style="position: relative;left: 15%" href="/home/reviewers/{{reviewer.reviewerId}}/quiz/{{quiz.quizId}}">View Quiz</a>
+      {% else %}
+        <a class="waves-effect waves-light btn-large" style="position: relative;left: 15%" href="quizTitle">Create Quiz</a>
+      {% endif %}
+    </div>
+    </div>
+    <div>
+    <div class="reviewer container">
+      <pre>{{reviewer.reviewerContent}}</pre>
+    </div>
+  </div>
+  </body>
+{% endblock content %}

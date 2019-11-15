@@ -1,0 +1,66 @@
+body {
+  background-color: #E2895F;
+}
+
+.landing-logo {
+  max-width: 100%;
+}
+
+.akadshare-container {
+  position: fixed;
+}
+
+.container.register .wrapper {
+  width: 500px;
+  display: inline-block;
+  padding-top: 20px;
+}
+
+.input-field label {
+  pointer-events: all;
+}
+
+.column-cards {
+  float: left;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.row {margin: 0 -5px;}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+.container {
+   text-align: center;
+   max-width: 50%;
+ }
+
+ div.reviewer {
+  display: table;
+  width:1000px;
+  height: auto;
+  margin: auto;
+  border: 3px solid #E2895F;
+}
+
+pre {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: left;
+}

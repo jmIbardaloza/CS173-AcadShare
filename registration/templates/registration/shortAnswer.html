@@ -1,0 +1,27 @@
+{% extends "./base.html"%}
+{%load static%}
+
+{%block content%}
+<div>
+  <img src="{% static 'registration/img/logo.png' %}" class="landing-logo" style="position: fixed; height:20%; top: 10%; left: 35%;" alt="">
+</div>
+  <div>
+  <div class = 'container register'>
+    <form method = "POST">
+      {% csrf_token %}
+          <div class="wrapper" style="position: fixed; top: 30%; left: 32.5%;">
+            <input placeholder="Question" id="questionA" type="text" name="questionA" class="validate">
+            <div class="form-group input-field">
+              <input placeholder="ANSWER" id="answerA" type="text" name="answerA" class="validate">
+              <!-- <label for="username">Username</label> -->
+            </div>
+          </div>
+        <div style="overflow:auto;">
+          <div class="register-button-grp"  style="position: fixed; top: 85%; left: 45%;">
+            <button class="waves-effect waves-light btn-large" type = "submit">Add Question</button>
+          </div>
+        </div>
+    </form>
+  </div>
+  </div>
+{%endblock content%}

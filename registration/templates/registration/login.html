@@ -1,0 +1,33 @@
+{% extends "./base.html"%}
+{%load static%}
+
+{% block body %}
+<body>
+{% endblock %}
+
+{%block content%}
+  <img src="{% static 'registration/img/landing-footer.png' %}" class="landing-logo" style="position: fixed; top: 0%; left: 0%;">
+  <div>
+    <img src="{% static 'registration/img/logo.png' %}" class="landing-logo" style="position: fixed; height:20%; top: 10%; left: 35%;" alt="">
+  </div>
+  <div class = 'container register'>
+    <form method = "POST">
+      {% csrf_token %}
+          <div class="wrapper" style="position: fixed; top: 30%; left: 32.5%;">
+            <div class="form-group input-field">
+              <input placeholder="Username" id="username" type="text" name="username" class="validate">
+              <!-- <label for="username">Username</label> -->
+            </div>
+            <div class="form-group input-field">
+              <input placeholder="Password" id="password1" type="password" name="password1" class="validate">
+              <!-- <label for="password1">Password</label> -->
+            </div>
+          </div>
+        <div style="overflow:auto;">
+          <div class="register-button-grp"  style="position: fixed; top: 60%; left: 47.5%;">
+            <button type="submit" class="waves-effect waves-light btn-large" id="submit">Login</button>
+          </div>
+        </div>
+    </form>
+  </div>
+{% endblock content %}

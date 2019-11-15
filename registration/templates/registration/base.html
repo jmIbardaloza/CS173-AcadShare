@@ -1,0 +1,30 @@
+{%load static%}
+<html>
+<head>
+  {% block title %}<title>AcadShare</title>{% endblock %}
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+  <link href = "{% static 'registration/css/materialize.css' %}" rel = "stylesheet">
+  <link href = "{% static 'registration/css/AcadShare.css' %}" rel = "stylesheet">
+</head>
+<body>
+  {% block head %}<!-- default content text (typically empty) -->{% endblock %}
+  {% if user.is_authenticated %}
+    <nav style="background: #E2895F">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo"><img src="{% static 'registration/img/logo.png' %}" class="brand-logo" style="position: relative; height:100%" alt=""></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="{% url 'home' %}">Subjects</a></li>
+            <li><a href="{% url 'reviewers' %}">Reviewers</a></li>
+            <li><a href="{% url 'createClass' %}">Create a Class</a></li>
+            <li><a href="{% url 'createClass' %}">Join a Class</a></li>
+            <li><a href="{% url 'logout_user' %}">Logout</a></li>
+          </ul>
+      </nav>
+  {% else %}
+    <div></div>
+  {% endif %}
+  {% block sidebar %}<!-- insert default navigation text for every page -->{% endblock %}
+  {% block content %}<!-- default content text (typically empty) -->{% endblock %}
+</body>
+</html>

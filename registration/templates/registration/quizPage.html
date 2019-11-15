@@ -1,0 +1,48 @@
+{% extends "./base.html"%}
+{% load static %}
+
+{%block content%}
+<body style="background-color: #ffffff">
+    <div>
+    <div style="text-align: center; color: #E2895F;">
+      <h4 style="display: inline-block">{{quiz.quizTitle}}</h4>
+    </div>
+    </div>
+    <div>
+    <div class="reviewer container">
+      <pre>
+        {% if items %}
+          {% for individualItem in items %}
+> {{individualItem.questionText}}
+{% if individualItem.choiceA %}
+A. {{individualItem.choiceA}}
+{% endif %}
+{% if individualItem.choiceB %}
+B. {{individualItem.choiceB}}
+{% endif %}
+{% if individualItem.choiceC %}
+C. {{individualItem.choiceC}}
+{% endif %}
+{% if individualItem.choiceD %}
+D. {{individualItem.choiceD}}
+{% endif %}
+          {% endfor %}
+          {% else %}
+            <h5>There are currently no questions. Add a question now!</h5>
+        {% endif %}
+      </pre>
+      <form method = "POST">
+      {% csrf_token %}
+      <div class="input-field col s12">
+        <select id="qtype" name="qtype" class="browser-default">
+          <option value="" disabled selected>Choose your option</option>
+            <option value="multiple_choice">Multiple Choice</option>
+            <option value="short_answer">Short Answer</option>
+        </select>
+      </div>
+      <button class="waves-effect waves-light btn-large" >Add a Question</button>
+      </form>
+    </div>
+  </div>
+  </body>
+{% endblock content %}

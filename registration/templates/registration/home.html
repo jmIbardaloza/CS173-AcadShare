@@ -1,0 +1,39 @@
+{% extends "./base.html"%}
+{% load static %}
+
+
+{%block content%}
+<body style="background-color: #ffffff">
+<div>
+  <div>
+    <h4>All My Subjects</h4>
+    <div class="column-cards">
+    {% if subjects %}
+    {% for individual_subjects in subjects %}
+    <div class="row">
+    <div class="col s12 m4">
+    <div class="card horizontal">
+      <div class="card-image">
+        <img src="{% static 'registration/img/cardSample.jpg' %}">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content white-text" style="background: #E2895F">
+          <h6>{{individual_subjects.subject.subjectName}}</h6>
+          <h7>{{individual_subjects.subject.subjectTitle}}</h7>
+        </div>
+        <div class="card-action">
+          <a href="/home/subjects/{{individual_subjects.subject.id}}/">Go to class</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+    {% endfor %}
+    </div>
+    {% else %}
+      <p class="akads-mid-blue-text">No Current Subjects</p>
+    {% endif %}
+  </div>
+</div>
+</body>
+{% endblock content %}
