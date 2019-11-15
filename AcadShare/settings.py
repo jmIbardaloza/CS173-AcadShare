@@ -76,7 +76,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'acadsharedatabase',
-        'USER': 'jmIbardaloza',
+        'USER': 'jmibardaloza',
         'PASSWORD': 'Websockets4Thesis',
         'HOST': 'https://acadshare.herokuapp.com/',
         'PORT': '',
