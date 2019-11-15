@@ -4,9 +4,6 @@ from django.contrib.auth.models import AbstractUser
 # Create your models here.
 class student(AbstractUser):
     id = models.AutoField(primary_key=True)
-    username = models.CharFeld(max_length=20)
-    password = models.CharFeld(max_length=20)
-    email = models.CharFeld(max_length=20)
 
     def __str__(self):
         return self.username
