@@ -79,7 +79,7 @@ DATABASES = {
         'USER': 'jmibardaloza',
         'PASSWORD': 'Websockets4Thesis',
         'HOST': 'localhost',
-        'PORT': '8888',
+        'PORT': '',
     }
 }
 
