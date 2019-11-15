@@ -80,7 +80,7 @@ DATABASES = {
         'NAME': 'acadsharedatabase',
         'USER': 'jmIbardaloza',
         'PASSWORD': 'Websockets4Thesis',
-        'HOST': '',
+        'HOST': 'https://acadshare.herokuapp.com/',
         'PORT': '',
     }
 }
