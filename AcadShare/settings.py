@@ -78,7 +78,7 @@ DATABASES = {
         'NAME': 'acadsharedatabase',
         'USER': 'jmibardaloza',
         'PASSWORD': 'Websockets4Thesis',
-        'HOST': 'acadshare.herokuapp.com',
+        'HOST': 'postgres://iqzvxmjvaqenxr:eb9df992d99d1fce8a77c028da68eb7e2d843094aa241ec092d712ce6ed9e4a4@ec2-50-16-197-244.compute-1.amazonaws.com:5432/dm4574qintdi6',
         'PORT': '',
     }
 }
