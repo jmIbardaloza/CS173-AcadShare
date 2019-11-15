@@ -18,7 +18,7 @@ import dj_database_url
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = '@$%ad0c#))746sk-n503nl3s6^n&xk(^$h6wr)%9*$g49-^1+^'
+SECRET_KEY = '@$%ad0c#))746sk-n503nl3s6^n&xk(^$h6wr)%9*$g49-^1+^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -85,9 +85,6 @@ DATABASES = {
     }
 }
 
-db_from_env = dj_database_url.config(conn_max_age=600)
-DATABASES['default'].update(db_from_env)
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
@@ -141,7 +138,3 @@ STATICFILES_DIRS = (
 AUTH_USER_MODEL = "registration.student"
 
 LOGOUT_REDIRECT_URL = '/'
-
-SECRET_KEY = os.environ.get('SECRET_KEY')
-EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
