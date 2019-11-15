@@ -25,7 +25,7 @@ SECRET_KEY = '@$%ad0c#))746sk-n503nl3s6^n&xk(^$h6wr)%9*$g49-^1+^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['acadshare.herokuapp.com']
 
 
 # Application definition
