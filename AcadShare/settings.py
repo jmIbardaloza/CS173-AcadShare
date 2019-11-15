@@ -30,7 +30,6 @@ ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'acadshare.herokuapp.com']
 
 INSTALLED_APPS = [
     'registration',
-    'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
